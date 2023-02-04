@@ -349,7 +349,7 @@ function showSlides(n) {
 
 
 <div class="navbar">
-  <a href="#" style="padding: 14px 20px;">&#128162;</a>
+	<a href="#" style="padding: 14px 20px;">&#128162; <p id="p11"></p></a>
   <a href="#" class="right" style="float:right">Product</a>
   <a href="contactus.html" style="float:right">Contact us</a>
   <a href="aboutus.html" style="float:right">About us</a>
@@ -730,4 +730,12 @@ section {
 $(document).ready(function(){
  showSlides(1);
 });
+</script>
+
+<script>
+var myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  var d = new Date();
+document.getElementById("p11").innerHTML = d.toISOString().slice(0, 10)+" "+d.toLocaleTimeString();
+}	
 </script>
