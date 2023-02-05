@@ -491,12 +491,16 @@ function showSlides(n) {
 
 				<p></p>
 
-				<form action="#" method="post">
+				
+				<form onsubmit="return(false)">
 
-					<input type="text" name="name" placeholder="Enter Name">
-					<input type="text" name="mobile" placeholder="Enter Mobile">
-					<textarea name="message" placeholder="Enter Message"></textarea>
-					<button>Connect With Us</button>
+					<input type="text" name="name" id="name" placeholder="Enter Name" required oninvalid="this.setCustomValidity('कृपया अपना नाम दर्ज करें')"
+						oninput="this.setCustomValidity('')">
+					<input type="text" name="mobile" id="mobile" placeholder="Enter Mobile" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required maxlength="10" oninvalid="this.setCustomValidity('कृपया अपना मोबाइल नंबर दर्ज करें')"
+						oninput="this.setCustomValidity('')">
+					<textarea name="message" placeholder="Enter Message" id="msg" required oninvalid="this.setCustomValidity('कृपया अपना संदेश लिखें')"
+						oninput="this.setCustomValidity('')"></textarea>
+					<button onclick="submitData()">Connect With Us</button>
 
 				</form>
 
@@ -741,4 +745,20 @@ function myTimer() {
   var d = new Date();
 document.getElementById("p11").innerHTML = d.toISOString().slice(0, 10)+" "+d.toLocaleTimeString();
 }	
+</script>
+
+<script>
+function submitData(){
+var name =$('#name').val();
+var mobile =$('#mobile').val();
+var msg =$('#msg').val();
+//alert("--- "+name+" "+mobile+" "+msg);
+
+if(name !='' && mobile !='' && msg !=''){
+ alert("Successfully received your request.\n Thanks & Regards,\n Team कृष्णा  ");
+ $('#name').val('');$('#mobile').val('');$('#msg').val('');
+}
+
+
+}
 </script>
