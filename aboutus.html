@@ -1,114 +1,714 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<title>Krishna Pratap Singh Thakur | About Us</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
-html {
-  box-sizing: border-box;
+/* Style the header */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+  color: white;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
 }
 
-.column {
+/* Style the top navigation bar  an d*/
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
   float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
+  display: block;
   color: white;
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
   text-align: center;
-  cursor: pointer;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
   width: 100%;
+  padding: 20px;
 }
 
-.button:hover {
-  background-color: #555;
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
 }
 
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
   }
 }
-.btn1 {
-  background-color: crimson;
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  font-size: 16px;
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-footer {
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #19302E;
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+.main-footer h1 {
+  font-size: 22px;
+  line-height: 117%;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.main-footer h2 {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.main-footer ul li a {
+  color: #ffffffcc;
+  text-decoration:none;
+}
+
+footer {
+  background-color: #19302E;
+  border-top: 1px solid #6EB981;
+  font-size: 17px;
+  padding: 15px 5px;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logoinfo p {
+  color: #6EB981;
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+.contact-details {
+  margin-top: 20px;
+}
+
+.contact-details li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.contact-details li a {
+  text-decoration:none;
+  color: #f1f1f1;
+}
+
+.contact-details .fa {
+  color: #f1f1f1;
+  margin-right: 10px;
+}
+
+.sociallogos{
+  padding:20px 0;
+}
+
+.sociallogos .logobox a{
+  padding:0 10px;
+  text-decoration:none;
+  color:#ffffff;
+  font-size:22px;
+}
+
+.com ul li{
+  padding:5px 0;
+}
+
+@media only screen and (max-width: 749px) {
+  .main-footer {
+    padding:20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+    .info{
+      padding:20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-footer {
+    grid-template-columns: 1fr;
+  }
+  .sociallogos{
+    padding:20px 0;
+  }
+  .com{
+    padding:20px 0;
+  } 
+
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
   cursor: pointer;
-      margin-left: 700px;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }
 </style>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 </head>
 <body>
 
-<a href="index.html">
-<button class="btn1"><i class="fa fa-home"></i> Home</button></a>
-&nbsp;
-<div class="about-section">
-  <h1>About Us </h1>
-  <p>Information about Krishna Pratap Singh</p>
-  <p>I am working on <b>Java</b> Technology.</p>
+
+<div class="navbar">
+	<a href="#" style="padding: 14px 20px;">&#128162; <p id="p11" style="float: right;text-align: center;margin-left: 450px;color: chartreuse;"></p></a>
+  <a href="#" class="right" style="float:right">Product</a>
+  <a href="contactus.html" style="float:right">Contact us</a>
+  <a href="aboutus.html" style="float:right">About us</a>
+  <a href="index.html" style="float:right">Home</a>
+  
+  
+  
 </div>
 
+<div class="slideshow-container">
 
- 
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%; margin-top:2px;" height="250px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="	https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%; margin-top:2px;" height="250px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%; margin-top:2px;" height="250px">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<div>
+<marquee style="color:crimson;"><i>For new Notification kindly contact on 011-21410525</i>
+<sup><img src="https://media.tenor.com/x8buEnCiZ4MAAAAC/new-blinking.gif" height="25px" width="40px"></sup></marquee>
+</div>
+<div class="row">
   
-  <div class="column">
-    <div class="card">
-      <img src="https://user-images.githubusercontent.com/121487246/210038304-9a64c925-57a7-4f38-ab61-5174b93a0cd0.jpg" alt="John" style="width:100%">
-      <div class="container">
-        <h2>Krishna Pratap Singh</h2>
-        <p class="title">Java Developer</p>
-        <p>I am working on java domain like spring boot, hibernate, JPA, Struts etc</p>
-        <p>krishnapratapsingh****@<br/>gmail.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
+  <div class="main">
+    <h5>About Us, Feb 10, 2023</h5>
+    <div class="fakeimg" style="height:400px;background-color: darkkhaki;border-radius: 5px;">
+		<div style="float:left">
+    <p style="color: yellow;text-align: center;"><b><i>About Us</i></b></p><hr><br/>
+	
+
+I started to learn technology from 2015-16 but when I entered into corporate I felt something is missing because college syllabus is not giving any advantages in the company so I turned back form company and learn practical knowledge.<br/><br/>
+I meet with many tech mantors with a clear vision, but in corporate life when we start working on the project we deadly close with project and slowly-slowly away from tech core/update/new concept. 
+<br/><br/>
+Till date i worked on many technology with multiple project -<br/>
+Java J2EE/J2SE<br/>
+PHP Wordpress/magenta<br/>
+Android<br/>
+Microservice Architecture With Spring Boot<br/>
+JavaScript etc
+<br/><br/><br/><br/><br/>
+<span style="color: navy;margin-left: 300px;">
+<u>We beleive in Best. Only tech can change the future and you can say future is tech.</u></span>
+</div>
+	</div>
+    
   </div>
+</div>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3><span>&#128162;</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">About us</a>
+					·
+					<a href="#">Contact us</a>
+					·
+					<a href="#">Product</a>
+					
+					
+				</p>
+
+				<p class="footer-company-name">© Copyright @2023 All Rights Reserved</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-twitter"><img src="	https://1000logos.net/wp-content/uploads/2021/05/Gmail-logo.png" width="30px" height="30px"></i></a>
+					<a href="#"><i class="fa fa-twitter"><img src="https://www.citypng.com/public/uploads/preview/-11595327237ulqckjabpb.png" width="30px" height="30px"></i></a>
+					<a href="#"><i class="fa fa-twitter"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmhAMZjUHKSb803M3bUXq_jZxgryPBIgBUmRJUcNo&s" width="30px" height="30px"></i></a>
+					
+
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p></p>
+
+				
+				<form onsubmit="return(false)">
+
+					<input type="text" name="name" id="name" placeholder="Enter Name" required oninvalid="this.setCustomValidity('कृपया अपना नाम दर्ज करें')"
+						oninput="this.setCustomValidity('')">
+					<input type="text" name="mobile" id="mobile" placeholder="Enter Mobile" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required maxlength="10" oninvalid="this.setCustomValidity('कृपया अपना मोबाइल नंबर दर्ज करें')"
+						oninput="this.setCustomValidity('')">
+					<textarea name="message" placeholder="Enter Message" id="msg" required oninvalid="this.setCustomValidity('कृपया अपना संदेश लिखें')"
+						oninput="this.setCustomValidity('')"></textarea>
+					<button onclick="submitData()">Connect With Us</button>
+
+				</form>
+
+			</div>
+      
+		</footer>
+		<p style="text-align: center;background-color: aqua;color: brown;">Designed By <b>@Krishna</b> </p>
+
 </div>
 
 </body>
 </html>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+.footer-distributed{
+	background: #444;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Roboto', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 100px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+
+</style>
+<script>
+$(document).ready(function(){
+ showSlides(1);
+});
+</script>
+
+<script>
+var myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  var d = new Date();
+document.getElementById("p11").innerHTML = d.toISOString().slice(0, 10)+" "+d.toLocaleTimeString();
+}	
+</script>
+
