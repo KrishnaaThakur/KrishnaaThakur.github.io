@@ -1,222 +1,731 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-   <!-- <title> Responsive Contact Us Form  | CodingLab </title>-->
-    <link rel="stylesheet" href="style.css">
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-   <style>
-   /* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
+<html lang="en">
+<head>
+<title>Krishna Pratap Singh Thakur | Contact Us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<style>
+* {
   box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
 }
-body{
-  min-height: 100vh;
-  width: 100%;
-  background: #c8e8e9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
-.container{
-  width: 85%;
-  background: #fff;
-  border-radius: 6px;
-  padding: 20px 60px 30px 40px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-.container .content{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.container .content .left-side{
-  width: 25%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-  position: relative;
-}
-.content .left-side::before{
-  content: '';
-  position: absolute;
-  height: 70%;
-  width: 2px;
-  right: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #afafb6;
-}
-.content .left-side .details{
-  margin: 14px;
+
+/* Style the header */
+.header {
+  padding: 80px;
   text-align: center;
+  background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+  color: white;
 }
-.content .left-side .details i{
-  font-size: 30px;
-  color: #3e2093;
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar  an d*/
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-footer {
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #19302E;
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+.main-footer h1 {
+  font-size: 22px;
+  line-height: 117%;
+  color: #ffffff;
   margin-bottom: 10px;
-}
-.content .left-side .details .topic{
-  font-size: 18px;
   font-weight: 500;
 }
-.content .left-side .details .text-one,
-.content .left-side .details .text-two{
-  font-size: 14px;
-  color: #afafb6;
+
+.main-footer h2 {
+  color: #ffffff;
+  font-weight: 500;
 }
-.container .content .right-side{
-  width: 75%;
-  margin-left: 75px;
+
+.main-footer ul li a {
+  color: #ffffffcc;
+  text-decoration:none;
 }
-.content .right-side .topic-text{
-  font-size: 23px;
-  font-weight: 600;
-  color: #3e2093;
+
+footer {
+  background-color: #19302E;
+  border-top: 1px solid #6EB981;
+  font-size: 17px;
+  padding: 15px 5px;
+  color: #ffffff;
+  text-align: center;
 }
-.right-side .input-box{
-  height: 50px;
-  width: 100%;
-  margin: 12px 0;
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
 }
-.right-side .input-box input,
-.right-side .input-box textarea{
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  background: #F0F1F8;
-  border-radius: 6px;
-  padding: 0 15px;
-  resize: none;
+
+.logoinfo p {
+  color: #6EB981;
+  font-size: 17px;
+  margin-top: 5px;
 }
-.right-side .message-box{
-  min-height: 110px;
+
+.contact-details {
+  margin-top: 20px;
 }
-.right-side .input-box textarea{
-  padding-top: 6px;
+
+.contact-details li {
+  list-style: none;
+  margin: 10px 0;
 }
-.right-side .button{
-  display: inline-block;
-  margin-top: 12px;
+
+.contact-details li a {
+  text-decoration:none;
+  color: #f1f1f1;
 }
-.right-side .button input[type="button"]{
-  color: #fff;
-  font-size: 18px;
-  outline: none;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  background: #3e2093;
+
+.contact-details .fa {
+  color: #f1f1f1;
+  margin-right: 10px;
+}
+
+.sociallogos{
+  padding:20px 0;
+}
+
+.sociallogos .logobox a{
+  padding:0 10px;
+  text-decoration:none;
+  color:#ffffff;
+  font-size:22px;
+}
+
+.com ul li{
+  padding:5px 0;
+}
+
+@media only screen and (max-width: 749px) {
+  .main-footer {
+    padding:20px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+    .info{
+      padding:20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-footer {
+    grid-template-columns: 1fr;
+  }
+  .sociallogos{
+    padding:20px 0;
+  }
+  .com{
+    padding:20px 0;
+  } 
+
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-.button input[type="button"]:hover{
-  background: #5029bc;
-}
-
-@media (max-width: 950px) {
-  .container{
-    width: 90%;
-    padding: 30px 40px 40px 35px ;
-  }
-  .container .content .right-side{
-   width: 75%;
-   margin-left: 55px;
-}
-}
-@media (max-width: 820px) {
-  .container{
-    margin: 40px 0;
-    height: 100%;
-  }
-  .container .content{
-    flex-direction: column-reverse;
-  }
- .container .content .left-side{
-   width: 100%;
-   flex-direction: row;
-   margin-top: 40px;
-   justify-content: center;
-   flex-wrap: wrap;
- }
- .container .content .left-side::before{
-   display: none;
- }
- .container .content .right-side{
-   width: 100%;
-   margin-left: 0;
- }
-}
-
-.btn1 {
-  background-color: crimson;
-  border: none;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
   color: white;
-  padding: 12px 16px;
-  font-size: 16px;
-  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
-   </style>
-   
-   </head>
-<body>
-<a href="index.html">
-<button class="btn1"><i class="fa fa-home"></i> Home</button></a>
-&nbsp;
-  <div class="container">
 
-    <div class="content">
-      <div class="left-side">
-        <div class="address details">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Address</div>
-          <div class="text-one">AOne Apartment</div>
-          <div class="text-two">Sector 55 Noida</div>
-        </div>
-        <div class="phone details">
-          <i class="fas fa-phone-alt"></i>
-          <div class="topic">Phone</div>
-          <div class="text-one">+91 9643268***</div>
-          <div class="text-two">+0096 3434 5678</div>
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
-          <div class="topic">Email</div>
-          <div class="text-one">krishnathakur@gmail.com</div>
-        </div>
-      </div>
-      <div class="right-side">
-        <div class="topic-text">Send Us a Message</div>
-        <p>If you want to connect with me please fill up below details-</p>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Enter your name">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your email">
-        </div>
-        <div class="input-box message-box">
-          
-        </div>
-        <div class="button">
-          <input type="button" value="Send Now" >
-        </div>
-      </form>
-    </div>
-    </div>
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+kbd {
+	margin: 0px 0.1em;
+	padding: 0.1em 0.6em;
+	border-radius: 3px;
+	border: 1px solid rgb(204, 204, 204);
+	color: rgb(51, 51, 51);
+	line-height: 1.4;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 10px;
+	display: inline-block;
+	box-shadow: 0px 1px 0px rgba(0,0,0,0.2), inset 0px 0px 0px 2px #ffffff;
+	background-color: rgb(247, 247, 247);
+	-moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+	-webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	text-shadow: 0 1px 0 #fff;
+}
+</style>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</head>
+<body>
+
+
+<div class="navbar">
+	<a href="#" style="padding: 14px 20px;">&#128162; <p id="p11" style="float: right;text-align: center;margin-left: 450px;color: chartreuse;"></p></a>
+  <a href="#" class="right" style="float:right">Product</a>
+  <a href="contactus.html" style="float:right">Contact us</a>
+  <a href="aboutus.html" style="float:right">About us</a>
+  <a href="index.html" style="float:right">Home</a>
+  
+  
+  
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" style="width:100%; margin-top:2px;" height="250px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="	https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%; margin-top:2px;" height="250px">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" style="width:100%; margin-top:2px;" height="250px">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<div>
+<marquee style="color:crimson;"><i>For new Notification kindly contact on 011-21410525</i>
+<sup><img src="https://media.tenor.com/x8buEnCiZ4MAAAAC/new-blinking.gif" height="25px" width="40px"></sup></marquee>
+</div>
+<div class="row">
+  
+  <div class="main">
+    <h5>Contact Us, Feb 10, 2023</h5>
+    <div class="fakeimg" style="height:300px;background-color: darkkhaki;border-radius: 5px;">
+		<div style="float:left">
+    <p style="text-align:center;color:yellow;"><b><i>Contact Us</i></b> </p><hr><br/>
+
+<kbd>CONTACT US</kbd><br/>
+<kbd>ADDRESS :</kbd>
+<kbd>MORD, Jeevan Bharati, Tower I, 1st floor, Delhi </kbd><br/>
+<kbd>Connaught Place, New Delhi</kbd><br/>
+<kbd>Pin code : 110001</kbd><br/>
+<kbd>Phone : 011 2884 4140</kbd><br/><br/><br/><br/><br/><br/><br/>
+
+<kbd>
+Email :</kbd>
+ <kbd style="color:red;">krishnapratap@gmail.com</kbd>
+	
+</div><img src="con.jpg" height="230" width="" style="border-radius:5px; float:right">
+	</div>
+    
   </div>
+  
+</div>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3><span>&#128162;</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">About us</a>
+					·
+					<a href="#">Contact us</a>
+					·
+					<a href="#">Product</a>
+					
+					
+				</p>
+
+				<p class="footer-company-name">© Copyright @2023 All Rights Reserved</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-twitter"><img src="	https://1000logos.net/wp-content/uploads/2021/05/Gmail-logo.png" width="30px" height="30px"></i></a>
+					<a href="#"><i class="fa fa-twitter"><img src="https://www.citypng.com/public/uploads/preview/-11595327237ulqckjabpb.png" width="30px" height="30px"></i></a>
+					<a href="#"><i class="fa fa-twitter"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmhAMZjUHKSb803M3bUXq_jZxgryPBIgBUmRJUcNo&s" width="30px" height="30px"></i></a>
+					
+
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p></p>
+
+				
+				<form onsubmit="return(false)">
+
+					<input type="text" name="name" id="name" placeholder="Enter Name" required oninvalid="this.setCustomValidity('कृपया अपना नाम दर्ज करें')"
+						oninput="this.setCustomValidity('')">
+					<input type="text" name="mobile" id="mobile" placeholder="Enter Mobile" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required maxlength="10" oninvalid="this.setCustomValidity('कृपया अपना मोबाइल नंबर दर्ज करें')"
+						oninput="this.setCustomValidity('')">
+					<textarea name="message" placeholder="Enter Message" id="msg" required oninvalid="this.setCustomValidity('कृपया अपना संदेश लिखें')"
+						oninput="this.setCustomValidity('')"></textarea>
+					<button onclick="submitData()">Connect With Us</button>
+
+				</form>
+
+			</div>
+      
+		</footer>
+		<p style="text-align: center;background-color: aqua;color: brown;">Designed By <b>@Krishna</b> </p>
+
+</div>
+
 </body>
 </html>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+* {
+  font-family: Roboto;
+}
+
+.footer-distributed{
+	background: #444;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Roboto', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 100px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+
+</style>
+<script>
+$(document).ready(function(){
+ showSlides(1);
+});
+</script>
+
+<script>
+var myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  var d = new Date();
+document.getElementById("p11").innerHTML = d.toISOString().slice(0, 10)+" "+d.toLocaleTimeString();
+}	
+</script>
+
