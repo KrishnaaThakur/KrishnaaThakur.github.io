@@ -13,3 +13,6 @@
 ![hi](https://user-images.githubusercontent.com/121487246/218021707-96e7333e-08b8-4e7c-9616-8e8dc398afe2.png)
 ![bb](https://user-images.githubusercontent.com/121487246/218021724-6b7de770-4999-401a-93e6-198e36248734.png)
 ![abt](https://user-images.githubusercontent.com/121487246/218291467-d65c74ac-2a45-488e-afb4-95cba09dcd23.png)
+![kk](https://github.com/KrishnaaThakur/KrishnaaThakur.github.io/assets/121487246/00da489d-4eaf-4881-934c-72650ffdd8d2)
+![kk1](https://github.com/KrishnaaThakur/KrishnaaThakur.github.io/assets/121487246/1b7a3656-2b93-4d36-a647-e75594b0ff3f)
+![k2](https://github.com/KrishnaaThakur/KrishnaaThakur.github.io/assets/121487246/29aba91c-26b3-4583-8e85-dc2eb402e178)
